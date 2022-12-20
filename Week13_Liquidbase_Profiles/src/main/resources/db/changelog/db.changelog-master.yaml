@@ -1,0 +1,57 @@
+databaseChangeLog:
+  - preConditions:
+  - runningAs:
+      username: liquibase
+
+  - changeSet:
+      id: 1
+      author: kostadinova
+      changes:
+        - createTable:
+            tableName: school
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: is_highschool
+                  type: boolean
+
+  - changeSet:
+      id: 2
+      author: kostadinova
+      changes:
+        - addColumn:
+            tableName: school
+            columns:
+              - column:
+                  name: max_number_of_students
+                  type: int
+  - changeSet:
+      id: 3
+      author: kostadinova
+      changes:
+        - createTable:
+            tableName: teacher
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

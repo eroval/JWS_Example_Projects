@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+<header th:replace="fragments :: header"></header>
+<h4>Teachers in Schools:</h4>
+<div class="col-6">
+    <h3 th:unless="${teachers} and ${teachers.size()}">There are no teachers!</h3>
+    <table th:if="${teachers.size()>0}" class="table table-hover">
+        <th>Name</th>
+        <th>Subject</th>
+        <th>School Name</th>
+        <th>Is High School</th>
+        <tr th:each="teacher : ${teachers}">
+            <td th:text="${teacher.teacherName}"></td>
+            <td th:text="${teacher.subject}"></td>
+            <td th:text="${teacher.schoolName}"></td>
+            <td th:text="${teacher.highSchool}"></td>
+        </tr>
+    </table>
+</div>
+<footer th:replace="fragments :: footer"></footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+package com.informatics.cscb869f2022week5.services;
+
+import com.informatics.cscb869f2022week5.data.entity.Teacher;
+import com.informatics.cscb869f2022week5.dto.CreateTeacherDTO;
+import com.informatics.cscb869f2022week5.dto.TeacherSchoolDTO;
+
+import java.util.List;
+
+public interface TeacherService {
+    List<TeacherSchoolDTO> getAllTeachersSchools();
+
+    Teacher create(CreateTeacherDTO teacher);
+}

@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.informatics.cscb869f2020week12.Cscb869f2020week12Applica
+ tion
+

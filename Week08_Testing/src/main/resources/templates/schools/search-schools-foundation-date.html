@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+<header th:replace="fragments :: header"></header>
+<h4>Register the School</h4>
+<div class="col-6">
+    <form action="#" th:action="@{/schools/names-foundation-date}" method="get">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" type="text" th:name="schoolName" placeholder="Name" id="name">
+            <label for="name">Foundation Date</label>
+            <input class="form-control" type="date" th:name="foundationDate" placeholder="dd-mm-yyyy" id="foundationDate">
+        </div>
+        <button type="submit" class="btn btn-primary">Find Schools</button>
+    </form>
+</div>
+<footer th:replace="fragments :: footer"></footer>
+</body>
+</html>
